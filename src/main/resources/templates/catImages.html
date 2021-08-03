@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat</title>
+</head>
+<body>
+<br/>
+<form th:action="@{/th/postform}" th:object="${catImage}" method="post" th:method="post">
+    <input type="text" th:field="*{id}"/>
+    <input type="text" th:field="*{url}"/>
+
+    <input type="submit"/>
+</form>
+<br/>
+</body>
+</html>
