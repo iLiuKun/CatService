@@ -1,0 +1,36 @@
+Get:@RestController
+@RequestMapping(value="/hello/{id}/{name}",method= RequestMethod.GET)
+@PathVariable
+
+@RequestMapping(value="/hello",method= RequestMethod.GET)
+@RequestParam Integer id
+
+
+
+Post:@RestController  form-data
+@PostMapping("/hello")
+@RequestParam("name") String name,
+
+@PostMapping("/hello")
+@RequestParam(name = "name", defaultValue = "xxx") String name,
+
+@PostMapping("/hello")
+@RequestParam Map<String,Object> params
+
+@PostMapping("/hello")
+User user
+
+
+Post:@RestController  Raw，Text
+@PostMapping("/hello")
+HttpServletRequest request
+
+Post:@RestController  raw，json
+@PostMapping("/hello")
+@RequestBody Map params
+
+@PostMapping("/hello")
+@RequestBody User user
+
+@PostMapping("/hello")
+@RequestBody List<User> users
